@@ -9,4 +9,11 @@ def find_dog(sound):
 sound = "야옹"
 find_result=find_dog(sound)
 
+
+print(find_result)
+print('ㅋㅋ')
+print(find_result)
+print('ㅋㅋ')
+print(find_result)
+print('ㅋㅋ')
 print(find_result)
