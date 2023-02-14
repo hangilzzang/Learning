@@ -6,14 +6,15 @@ def find_dog(sound):
         return("다른동물이구나")
     
 
-sound = "야옹"
+sound = "멍멍"
 find_result=find_dog(sound)
 
 
+
 print(find_result)
-print('ㅋㅋ')
-print(find_result)
-print('ㅋㅋ')
-print(find_result)
-print('ㅋㅋ')
-print(find_result)
+sound='하하'
+print(find_dog(sound))
+
+
+for i in range(3):
+    print('hiz')
