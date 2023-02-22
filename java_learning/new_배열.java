@@ -1,35 +1,34 @@
 package java_learning;
+import java.util.Arrays;
 
 public class new_배열 {
     public static void main(String[] args) {
-        int[] scores; // 배열 scores 선언
-        scores = new int[] {83,90,87}; // 이미 선언한 배열에 값을 넣어주고 싶을때는 new를 사용한다
-        int sum1 = 0;
-        for(int i=0; i<3; i++) {
-            sum1 +=scores[i];
-        }
-        System.out.println("총합: "+sum1);
-
-        int sum2=add(new int[]  {83, 90, 87});
-        System.out.println("총합: "+sum2);
-        System.out.println();
+    int[] arr1 = new int[3]; //타입 변수 = new 타입[길이]
+    int[][] arr2=new int[2][3]; // 2차원 배열 생성(행렬형태)
+    int[][] arr3=new int[2][]; // 2차원 배열 생성(요소의 길이가 다름)
+    arr3[0]=new int[1];
+    arr3[1]=new int[5];
+    System.out.println("리스트 깡통상태: "+Arrays.toString(arr1));
+    arr1[0]=10;
+    arr1[1]=20;
+    arr1[2]=30;
+    System.out.println("리스트 채운상태: "+Arrays.toString(arr1));
+    System.out.println("array2 index0: "+Arrays.toString(arr2[0]));
+    System.out.println("array2 index1: "+Arrays.toString(arr2[1]));
+    System.out.println("array3 index0: "+Arrays.toString(arr3[0]));
+    System.out.println("array3 index1: "+Arrays.toString(arr3[1]));
     }
-        public static int add(int[] scores) {
-            int sum2=0;
-            for(int i=0; i<3; i++) {
-                sum2+=scores[i];
-            }
-            return sum2;
-        }
 }
 
-/*
- * 자바의 메소드 정의 형식은 다음과 같다
- * 접근제어자 반환타입 메소드이름 
- * public이나 static new같은 부분은 사실 아직 잘 모르겠다 
- * 일단 기초적인걸 먼저 익히는식으로 공부하면 좋을것같다
+
+/* new를 이용한 배열생성을 배워본다
+ * new를 사용하면 먼저 배열을 선언한뒤에 값을 나중에 저장하는것이 가능하다
+ * 그냥 깡통 new배열에 들어있는값은 선언된 배열의 타입에 따라 다르다
  * 
- * 위에서도 언급했다싶이 이미 선언한 배열에 값을 넣어주고 싶을때는 new를 사용한다
- * 뿐만아니라 함수에서 파라미터로 배열을 사용할경우 실사용시 new를 포함해서 배열을 넣어줘야한다
- * 파이썬과 다르게 자바에서는 함수를 먼저 사용하고 뒤에서 정의해줘도된다 
+ * new 배열 초기값
+ * 기본타입(정수): 0
+ * 기본타입(실수): 0.0
+ * 기본타입(논리): False
+ * 
+ * new를 사용해 2차원깡통도 만들수있다 2차원이지만 하위 리스트의 길이를 다르게하고싶다면 array3의 방법을 이용하면 된다
  */
