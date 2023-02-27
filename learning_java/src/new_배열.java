@@ -8,14 +8,23 @@ public class new_배열 {
         arr3[0] = new int[1];
         arr3[1] = new int[5];
         System.out.println("리스트 깡통상태: " + Arrays.toString(arr1));
-        arr1[0] = 10;
+        arr1[0] = 10; // 인덱스 하나씩 요소를 넣어준다
         arr1[1] = 20;
         arr1[2] = 30;
         System.out.println("리스트 채운상태: " + Arrays.toString(arr1));
-        System.out.println("array2 index0: " + Arrays.toString(arr2[0]));
-        System.out.println("array2 index1: " + Arrays.toString(arr2[1]));
-        System.out.println("array3 index0: " + Arrays.toString(arr3[0]));
-        System.out.println("array3 index1: " + Arrays.toString(arr3[1]));
+        System.out.println("not filled array2 index0: " + Arrays.toString(arr2[0]));
+        System.out.println("not filled array2 index1: " + Arrays.toString(arr2[1]));
+        System.out.println("not filled array3 index0: " + Arrays.toString(arr3[0])); // array3은 행렬형태가 아니다
+        System.out.println("not filled array3 index1: " + Arrays.toString(arr3[1]));
+        int num = 1;
+        for (int i = 0; i < arr3.length; i++) { // array3에다가 반복문을통해 요소 넣어주기
+            for (int j = 0; j < arr3[i].length; j++) {
+                arr3[i][j] = num;
+                num += 1;
+            }
+        }
+        System.out.println("filled array3 index0: " + Arrays.toString(arr3[0])); // 채워진 array3의 형태를 확인한다
+        System.out.println("filled array3 index1: " + Arrays.toString(arr3[1]));
     }
 }
 
